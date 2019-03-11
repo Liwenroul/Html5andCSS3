@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .a{
+            color:red;
+        }
+        .b{
+            color:red;
+            margin-left:2px;
+        }
+        .c{
+            margin-top:20px;
+        }
+        .d{
+            margin-top:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>毕业生信息</h1>
+    <form id="testform" action="#" method="GET">
+        <fieldset>
+            <legend class="a">
+                学生信息
+            </legend>
+            姓&nbsp;&nbsp;名<input type="text" name="text1" placeholder="请输入姓名" required autofocus/><span class="b">*</span>
+            <br>
+            学&nbsp;&nbsp;号<input type="number" name="num1" placeholder="请输入学号" required/><span class="b">*</span>
+            <br>
+            手&nbsp;&nbsp;机<input type="tel" name="tel1" placeholder="请输入手机号" required/><span class="b">*</span>
+            <br>
+            邮&nbsp;&nbsp;箱<input type="email" name="email1" placeholder="请输入邮箱地址" required/><span class="b">*</span>
+        </fieldset>
+        <fieldset class="d">
+            <legend class="a">
+                录取情况
+            </legend>
+            录取学校<input type="search" name="ser1" list="univercity">
+            <datalist id="univercity">
+                <option>河北师范大学</option>
+            </datalist>
+            <br>
+            入学成绩<input type="number" name="num2">
+            <br>
+            入学时间<input type="date" name="date1"> 
+        </fieldset>
+            <input type="submit" class="c">
+    </form>
+</body>
+</html>
