@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box2{
+            display: inline-block;
+            margin-top:10px;
+            background-color: rgb(199, 198, 198);
+        }
+        .box{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top:10px;
+            background-color: rgb(199, 198, 198);
+        }
+        .p{
+            position: absolute;
+            left:200px;
+            top: 100px;
+        }
+        .h{
+            display: none;
+        }
+        .box1{
+            margin-left:30px;
+            color:rgb(190, 189, 187);
+        }
+
+    </style>
+</head>
+<script type="text/javascript">
+    window.onload=function(){
+        if(localStorage.length<=5){
+            for(var i=localStorage.length-1;i>=0;i--){
+                var key=localStorage.key(i);
+                var value=localStorage.getItem(key);
+                var body=document.getElementsByTagName("body")[0];
+                var di=document.createElement('div');
+                body.appendChild(di);
+                di.innerHTML=value;
+                di.setAttribute("class","box");
+            }
+        }
+    }
+    function storage(){
+        var data =document.getElementById("text").value;
+        var time=new Date().getTime();
+        localStorage.setItem(time,data);
+
+        var body=document.getElementsByTagName("body")[0];
+        var div=document.getElementsByTagName("div");
+        for(var i=0;i<div.length;i++){
+            body.removeChild(div[i]);
+            i=0;
+            i--;
+        }
+
+        if(data){
+            for(var i=localStorage.length-1;i>=localStorage.length-5;i--){
+                var body=document.getElementsByTagName("body")[0];
+                var key=localStorage.key(i);
+                var value=localStorage.getItem(key);
+                var di=document.createElement('div');
+                body.appendChild(di);
+                di.innerHTML=value;
+                di.setAttribute("class","box");
+            }
+        }
+        else {
+            alert("请输入内容");
+            for(var i=localStorage.length-1;i>=0;i--){
+                var key=localStorage.key(i);
+                var value=localStorage.getItem(key);
+                if(value==""){
+                    localStorage.removeItem(key);
+                }
+            }    
+        }
+    }
+    function remove(){
+        alert("你确定清除最近搜索记录吗？");
+        var body=document.getElementsByTagName("body")[0];
+        var div=document.getElementsByTagName("div");
+        for(var i=0;i<div.length;i++){
+            body.removeChild(div[i]);
+            i=0;
+            i--;
+        }
+        localStorage.clear();
+        var div1=document.createElement("div");
+        body.appendChild(div1);
+        div1.innerHTML="无搜索记录";
+        div1.setAttribute("class","box1");
+    }
+</script>
+<body>
+    <input type="text" name="text1" id="text" placeholder="请输入想查找的商品">
+    <input type="button" value="搜索" onclick="storage()">
+    <br>
+    最近搜索
+    <br>
+    <input type="button" class="p" onclick="remove()" value="X">
+    <span class="h">无搜素的记录</span>    
+</body>
+</html>
