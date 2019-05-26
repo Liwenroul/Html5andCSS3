@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            width:370px;
+            height:425px;
+            border:4px solid #e6e6e6;
+            box-shadow:0 0 5px 5px #d6d5d5;
+            overflow: hidden;
+        }
+        #bt1{
+            width:46px;
+            height:46px;
+            border-radius: 23px;
+            background: #fd7546;
+            text-align: center;
+            position:absolute;
+            top:20px;
+            left:316px;
+        }
+        #bo{
+            width:370px;
+            height:195px;
+            background: rgb(27, 27, 27); 
+            opacity: 0.3;
+            position:absolute;
+            top:8px;
+            display: none;
+        }
+        #bt1 p{
+            color:white;
+            font-weight:bold;
+            font-size: 15px;
+            text-align: center;
+        }
+        #bt1 #p1{
+            position: relative;
+            bottom:10px;
+        }
+        #bt1 #p2{
+            position: relative;
+            bottom:30px; 
+        }
+        #bt2{
+            width:370px;
+            height:25px;
+            position: absolute;
+            top:206px;
+        }
+        #btt2{
+            width:55px;
+            height:25px;
+            background: #fd7546;
+            color:white;
+            text-align: center;
+            line-height:20px;
+        }
+        #bt3{
+            background: white;
+            position:relative;
+            bottom:45px;
+        }
+        #bt3 h2{
+            padding-top:25px;
+            margin-left:23px;
+        }
+        #bt3 .p1{
+            color:#fd7546;
+            font-size:20px;
+            margin-left:23px;
+            margin-top:-15px;
+        }
+        #bt3 .p2{
+            margin-left:23px;
+            margin-top:-25px;
+            display:none;
+        }
+        #bt4{
+            width:300px;
+            background: white;
+            font-size:12px;
+            color:#aba7ad;
+            margin-left:23px;
+            position:absolute;
+            top:390px;
+        }
+        #bt4 p{
+            display: inline-block;
+        }
+        #box:hover{
+            border:4px solid #d6d5d5;
+        }
+        #box:hover #bt3 .p2{
+            display: block;
+        }
+        #box:hover #bt2{
+            position: absolute;
+            top:106px;
+            transition:all 0.5s linear;
+        }
+        #box:hover #bt3{
+            position:relative;
+            bottom:145px;
+            transition:all 0.5s linear;
+        }
+        #box:hover img{
+            transform: scale(1.5,1.5);
+            transition:transform 0.5s linear;
+        } 
+        #box:hover #bo{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img src="img/20190517080419.jpg" alt="" width="370px" height="240px">
+        <div id="bo"></div>
+        <div id="bt1">
+            <p id="p1">15</p>
+            <p id="p2">五月</p>
+        </div>
+        <div id="bt2">
+            <div id="btt2">照片</div>
+        </div>
+        <div id="bt3">
+            <h2>青岛栈桥</h2>
+            <p class="p1">国家AAAA级旅游景区</p>
+            <p class="p2">青岛栈桥是青岛海滨风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区，也是首批国家AAAA级旅游景区 。青岛栈桥位于游人如织的青岛中山路南端，桥身从海岸探入如弯月般的青岛湾深处。桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛。</p>
+        </div>
+        <div id="bt4">
+            <p>10分钟前</p>
+            <p>123评论</p>
+        </div>
+            <!-- <div id="bt3">
+                    <h2>青岛栈桥</h2>
+                    <p class="p1">国家AAAA级旅游景区</p>
+                    <p class="p2">青岛栈桥是青岛海滨风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区，也是首批国家AAAA级旅游景区 。青岛栈桥位于游人如织的青岛中山路南端，桥身从海岸探入如弯月般的青岛湾深处。桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛。</p>
+                    <div id="bt4">
+                        <p>10分钟前</p>
+                        <p>123评论</p>
+                    </div>
+                </div> -->
+    </div>
+</body>
+</html>
