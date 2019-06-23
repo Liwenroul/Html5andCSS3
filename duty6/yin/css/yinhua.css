@@ -1,0 +1,52 @@
+*{
+    padding:0;
+    margin:0;
+}
+ul,li,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*黑色头部*/
+@media only screen and (min-width:780px){
+    .box{
+        background:#282828;
+        height: 45px;
+        color:white;
+    }
+    .box .d2{
+        position: absolute;
+        right: 112px;
+        top:14px;
+    }
+    .d2 span{
+        color:white;
+    }
+    .box .d1{
+        position: absolute;
+        right: 263px;
+        top:14px;
+    }
+    .box img{
+        position: absolute;
+        right:373px;
+        top:14px;
+    }
+
+/*导航*/
+
+
+    #box1{
+        width:1200px;
+        margin:0 auto;
+        margin-left:25px;
+    }
+}
+
+@media screen and (max-width:780px){
+.box{
+    display:none;
+}
+}
